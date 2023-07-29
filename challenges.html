@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Challenges</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+        <ul>
+            <li><a href="index.html">Home</a> </li>
+            <li><a href="photoApp.html">Photo App</a> </li>
+            <li><a href="gallery.html">Gallery</a> </li>
+            <li><a href="quiz.html">Quiz</a> </li>
+            <li><a href="challenges.html" id="active">Challenges</a> </li>
+        </ul>
+        </nav>
+        <h1><em>Challenges</h1>
+        <p>Welcome to my JavaScript challenge page! Here you will find nine JavaScript challenges from MADLAB.</p>
+    </header>
+    <div class="grid-container">
+    <div class="challenge">
+
+        <h2>Challenge 1</h2>
+        <p>Write a program that will ask you your name It will then display 'Hello Name' where 'Name' is the name you have entered. E.g. What is your name? Ada Hello Ada</p>
+        <p>Extension: have the program respond with “Hello, Your Majesty” ****if**** the name Charles or Elizabeth is entered.</p>
+
+        <div>
+            <form name="hello">
+                <label for="myName">Please enter your name</label>
+                <input id="myName" type="text" name="myName">
+            </form>
+            <br>
+            <button type="button" onclick="sayHello()">Submit</button>
+        </div>
+    </div>  
+
+    <div class="challenge">
+        <h2>Challenge 2</h2>
+        <p>Write a program that will display a knock-knock joke, where the user can input their responses to trigger the following line of the joke.</p>
+        <p> Extension: have the program flag up when the incorrect response is entered e.g. not “who's there”</p>
+
+        <div>
+            <p>Click below to hear a joke!</p>
+            <button type="button" onclick="knockKnock()">Joke</button>
+        </div>
+    </div>
+
+    <div class="challenge">
+        <h2>Challenge 3</h2>
+        <p>Write a program to work out the areas of a rectangle. Collect the width and height of the rectangle from user input. Calculate the area (height x width) and display the result.</p>
+        <p>Extension: have the program calculate the volume of a cuboid (height x width x length)</p>
+
+        <div>
+            <form name="area">
+                <h3>Find the area of your rectangle!</h3>
+                <label for="widthR">Please enter the width of your rectangle:</label>
+                <input id="widthR" type="number" name="widthR">
+                <br><br>
+                <label for="heightR">Please enter the height of your rectangle:</label>
+                <input id="heightR" type="number" name="heightR">
+            </form>
+            <p>Click below to calculate the area of your rectangle.</p>
+            <button type="button" onclick="rectArea()">Calculate</button>
+            <p id="hiddenArea" class="hidden"></p>
+        </div>
+
+        <div>
+            <form name="volume">
+                <h3> Find the volume of your cuboid!</h3>
+                <label for="width">Please enter the width of your cuboid:</label>
+                <input id="width" type="number" name="width">
+                <br><br>
+                <label for="height">Please enter the height of your cuboid:</label>
+                <input id="height" type="number" name="height">
+                <br><br>
+                <label for="length">Please enter the length of your rectangle:</label>
+                <input id="length" type="number" name="length">
+            </form>
+            <p>Click below to calculate the volume of your cubiod.</p>
+            <button type="button" onclick="cubVol()">Calculate</button>
+            <p id="hiddenAreaCub" class="hidden"></p>
+        </div>
+    </div>
+
+    <div class="challenge">
+        <h2>Challenge 4 - incomplete</h2>
+        <p>Write a program to work out how many days you have lived for.</p>
+        <p>Extension: have the program calculate how many seconds you have lived for</p>
+
+        <label for="days">Please enter your date of birth.</label>
+        <input id="days" type="date" name="days">
+        
+    </div>
+
+    <div class="challenge">
+        <h2>Challenge 5 - incomplete</h2>
+        <p>Write a program that will accept someone's date of birth and determine whether they can vote (i.e. Are they 18?)</p>
+        <p>Extension: extend the program to tell them which of these they can and can't do; vote, join the army, drive, hire a car</p>
+    </div>
+
+    <div class="challenge">
+        <h2>Challenge 6 - incomplete</h2>
+        <p>Make a game of rock, paper, scissors against the computer.</p>
+        <p>Extension: Create a UI in HTML and CSS for this game</p>
+    </div>
+
+    <div class="challenge">
+        <h2>Challenge 7 - incomplete</h2>
+        <p>Write a program for a game where the computer generates a random starting number between 20 and 30. The player and the computer can remove 1,2 or 3 from the number in turns. Something like this...</p>
+        <p>Starting number: 25</p>
+        <p>How many do you want to remove? 3</p>
+        <p>22 left</p>
+        <p>Computer removes 2</p>
+        <p>20 left</p>
+        <p>The player who has to remove the last value to bring the number down to 0 is the loser.</p>
+        <p>1 left</p>
+        <p>Computer removes 1</p>
+        <p>You win!</p>
+        <p>Extension: Create a UI in HTML and CSS for this game</p>
+    </div>
+
+    <div class="challenge">
+        <h2>Challenge 8 - incomplete</h2>
+        <p>Write a program for a Higher / Lower guessing game. The computer randomly generates a sequence of up to 10 numbers between 1 and 13. The player after seeing each number in turn has to decide whether the next number is higher or lower. If you can remember Brucie's 'Play your cards right' it's basically that. If you get 10 guesses right, you win the game</p>
+        <p>Extension: Create a UI in HTML and CSS for this game</p>
+    </div>
+
+    <div class="challenge">
+        <h2>Challenge 9 - incomplete</h2>
+        <p>Guess the number game.</p>
+        <p>The computer selects a random number between 1 and 100. The user keeps guessing which number the computer has chosen until they get it right. After each guess, the computer responds 'got it', 'too high' or 'too low'. After the user has guessed the number, the computer tells them how many attempts they have made.</p>
+        <p>Extension: Create a UI in HTML and CSS for this game</p>
+    </div>
+</div>
+</body>
+<script src="demo.js"></script>
+</html>

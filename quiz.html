@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en-gb">
+<head>
+    <title>Quiz!</title>
+    <script src="quiz.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a> </li>
+                <li><a href="photoApp.html">Photo App</a> </li>
+                <li><a href="gallery.html">Gallery</a> </li>
+                <li><a href="quiz.html"id="active">Quiz</a> </li>
+                <li><a href="challenges.html">Challenges</a> </li>
+            </ul>
+        </nav>
+    </header>
+    <h1>Music quiz!</h1>
+    <p>This quiz will test how much you know about music.</p>
+    <div id="quiz">
+        <h2>The Quiz</h2>
+        <form name="Quiz">
+            <label for="name">Enter your name</label>
+            <input id="name" type="text" name="name">
+            <br><br>
+            <div class="question">
+            <p>Which of these bands is from Sheffield?</p>
+                <input id="arcticMonkeys1" type="radio" name="sheffield" value="arcticMonkeys1">
+                <label for="arcticMonkeys1">Arctic Monkeys</label>
+                <br>
+                <input id="Oasis" type="radio" name="sheffield" value="Oasis">
+                <label for="Oasis">Oasis</label>
+                <br>
+                <input id="theKillers" type="radio" name="sheffield" value="theKillers">
+                <label for="theKillers">The Killers</label>
+                <br>
+                <input id="abba" type="radio" name="sheffield" value="abba">
+                <label for="abba">ABBA</label>
+            </div>
+            <br>
+            <div class="question">
+            <p>Which of these bands named themselves after a pub in Stockport?</p>
+                <input id="theBeatles" type="radio" name="stockport" value="theBeatles">
+                <label for="theBeatles">The Beatles</label>
+                <br>
+                <input id="arcticMonkeys2" type="radio" name="stockport" value="arcticMonkeys2">
+                <label for="arcticMonkeys2">Arctic Monkeys</label>
+                <br>
+                <input id="theBlossoms" type="radio" name="stockport" value="theBlossoms">
+                <label for="theBlossoms">The Blossoms</label>
+                <br>
+                <input id="theRollingStones" type="radio" name="stockport" value="theRollingStones">
+                <label for="theRollingStones">The Rolling Stones</label>
+            </div>
+            <br>
+            <div class="question">
+                <!--js incomplete-->
+                <p>Which of these songs are by Pink Floyd?</p>
+                    <input id="theGreat" type="checkbox" name="pinkFloyd" value="theGreat">
+                    <label for="theGreat">The Great Gig in the Sky</label>
+                    <br>
+                    <input id="stairway" type="checkbox" name="pinkFloyd" value="stairway">
+                    <label for="stairway">Stairway to Heaven</label>
+                    <br>
+                    <input id="anotherBrick" type="checkbox" name="pinkFloyd" value="anotherBrick">
+                    <label for="anotherBrick">Another Brick in the Wall</label>
+                    <br>
+                    <input id="karma" type="checkbox" name="pinkFloyd" value="karma">
+                    <label for="karma">Karma Police</label>
+                </div>
+            </form>
+    </div>
+    <br>
+    <button type="button" onclick="checkAnswers()">Submit</button>
+</body>
+</html>

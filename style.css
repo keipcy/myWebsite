@@ -1,0 +1,77 @@
+/*styling for the whole webpage*/
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color:blanchedalmond;
+    font-size:16px;
+    padding-left:5%;
+    padding-right:5%;
+    } 
+
+/*challenges page grid*/
+.grid-container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+}
+
+.challenge {
+    height:fit-content;
+    border-style: outset;
+    border-color: cadetblue;
+    margin-bottom: auto;
+    padding: 1%;
+    max-width: 40%;
+}
+
+/*styling for images*/
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/*making the flex-container div flexible*/
+.flex-container {
+    background-color: darkseagreen;
+    display: flex;
+    flex-direction:row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items:center;
+    align-content:space-around;
+    padding:10px;
+}
+
+/*styling the images in the flex-container*/
+.flex-container img {
+    height:150px;
+    padding:10px;
+    border-style:solid;
+    margin:20px;
+    background-color:white;
+}
+
+/*styling the navigation bar*/
+nav ul{
+    background-color: darksalmon;  
+    overflow:hidden;
+    list-style-type: none;
+}
+
+/*styling the links in the nav bar*/
+nav ul a {
+    float: left;
+    display:block;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    text-decoration: none;
+}
+
+/*change the colour of the nav item the mouse hovers over*/
+nav a:hover {
+    background-color: black;
+}
+/*change the colour of the nav item for the page you are currently on*/
+#active {
+    background-color: darkseagreen;
+}
