@@ -1,9 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Challenges page" />
     <title>Challenges</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="icon" type="image/gif" href="cat.gif">
+    <link rel="icon" type="image/gif" href="media/cat.gif">
 </head>
 <body>
     <header>
@@ -23,15 +27,15 @@
     <div class="challenge">
 
         <h2>Challenge 1</h2>
+        <p>Description:</p>
         <p>Write a program that will ask you your name It will then display 'Hello Name' where 'Name' is the name you have entered. E.g. What is your name? Ada Hello Ada</p>
         <p>Extension: have the program respond with “Hello, Your Majesty” ****if**** the name Charles or Elizabeth is entered.</p>
-
-        <div>
+        <div class="solution">
             <form name="hello">
                 <label for="myName">Please enter your name</label>
                 <input id="myName" type="text" name="myName">
             </form>
-            <br>
+            <br><br>
             <button type="button" onclick="sayHello()">Submit</button>
         </div>
     </div>  
@@ -40,9 +44,9 @@
         <h2>Challenge 2</h2>
         <p>Write a program that will display a knock-knock joke, where the user can input their responses to trigger the following line of the joke.</p>
         <p> Extension: have the program flag up when the incorrect response is entered e.g. not “who's there”</p>
-
-        <div>
-            <p>Click below to hear a joke!</p>
+        <div class="solution">
+            <p>Click to hear a joke!</p>
+            <br><br>
             <button type="button" onclick="knockKnock()">Joke</button>
         </div>
     </div>
@@ -51,36 +55,37 @@
         <h2>Challenge 3</h2>
         <p>Write a program to work out the areas of a rectangle. Collect the width and height of the rectangle from user input. Calculate the area (height x width) and display the result.</p>
         <p>Extension: have the program calculate the volume of a cuboid (height x width x length)</p>
+        <div class="solution">
+            <div>
+                <form name="area">
+                    <h3>Find the area of your rectangle!</h3>
+                    <label for="widthR">Please enter the width of your rectangle:</label>
+                    <input id="widthR" type="number" name="widthR">
+                    <br><br>
+                    <label for="heightR">Please enter the height of your rectangle:</label>
+                    <input id="heightR" type="number" name="heightR">
+                </form>
+                <p>Click below to calculate the area of your rectangle.</p>
+                <button type="button" onclick="rectArea()">Calculate</button>
+                <p id="hiddenArea" class="hidden"></p>
+            </div>
 
-        <div>
-            <form name="area">
-                <h3>Find the area of your rectangle!</h3>
-                <label for="widthR">Please enter the width of your rectangle:</label>
-                <input id="widthR" type="number" name="widthR">
-                <br><br>
-                <label for="heightR">Please enter the height of your rectangle:</label>
-                <input id="heightR" type="number" name="heightR">
-            </form>
-            <p>Click below to calculate the area of your rectangle.</p>
-            <button type="button" onclick="rectArea()">Calculate</button>
-            <p id="hiddenArea" class="hidden"></p>
-        </div>
-
-        <div>
-            <form name="volume">
-                <h3> Find the volume of your cuboid!</h3>
-                <label for="width">Please enter the width of your cuboid:</label>
-                <input id="width" type="number" name="width">
-                <br><br>
-                <label for="height">Please enter the height of your cuboid:</label>
-                <input id="height" type="number" name="height">
-                <br><br>
-                <label for="length">Please enter the length of your cuboid:</label>
-                <input id="length" type="number" name="length">
-            </form>
-            <p>Click below to calculate the volume of your cubiod.</p>
-            <button type="button" onclick="cubVol()">Calculate</button>
-            <p id="hiddenAreaCub" class="hidden"></p>
+            <div>
+                <form name="volume">
+                    <h3> Find the volume of your cuboid!</h3>
+                    <label for="width">Please enter the width of your cuboid:</label>
+                    <input id="width" type="number" name="width">
+                    <br><br>
+                    <label for="height">Please enter the height of your cuboid:</label>
+                    <input id="height" type="number" name="height">
+                    <br><br>
+                    <label for="length">Please enter the length of your cuboid:</label>
+                    <input id="length" type="number" name="length">
+                </form>
+                <p>Click below to calculate the volume of your cubiod.</p>
+                <button type="button" onclick="cubVol()">Calculate</button>
+                <p id="hiddenAreaCub" class="hidden"></p>
+            </div>
         </div>
     </div>
 
@@ -88,27 +93,39 @@
         <h2>Challenge 4</h2>
         <p>Write a program to work out how many days you have lived for.</p>
         <p>Extension: have the program calculate how many seconds you have lived for</p>
-
         <label for="days">Please enter your date of birth.</label>
         <input id="days" type="date" name="days">
-        <br>
-        <p>Click below to calculate how many days you have been alive for:</p>
-        <button type="button" onclick="alive()">Calculate</button>
-        <p id="hiddenDaysAlive" class="hidden"></p>
-        <p id="hiddenSecondsAlive" class="hidden"></p>
-
+        <br><br>
+        <div class="solution">
+            <p>Click below to calculate how many days you have been alive for:</p>
+            <button type="button" onclick="alive()">Calculate</button>
+            <p id="hiddenDaysAlive" class="hidden"></p>
+            <p id="hiddenSecondsAlive" class="hidden"></p>
+        </div>
         <h2>Challenge 5</h2>
         <p>Write a program that will accept someone's date of birth and determine whether they can vote (i.e. Are they 18?)</p>
         <p>Extension: extend the program to tell them which of these they can and can't do; vote, join the army, drive, hire a car</p>
-        <p>Click below to see what you are eligible for:</p>
-        <button type="button" onclick="eligible()">Calculate</button>
-        <p id="hiddenEligible" class="hidden"></p>
+        <div class="solution">
+            <p>Click below to see what you are eligible for:</p>
+            <button type="button" onclick="eligible()">Calculate</button>
+            <p id="hiddenEligible" class="hidden"></p>
+        </div>
     </div>
 
     <div class="challenge">
-        <h2>Challenge 6 - incomplete</h2>
+        <h2>Challenge 6</h2>
         <p>Make a game of rock, paper, scissors against the computer.</p>
         <p>Extension: Create a UI in HTML and CSS for this game</p>
+        <div id="rockPaperScissors">
+            <h3>Rock, Paper, Scissors!</h3>
+            <p>Would you like to join me in a game of rock, paper, scissors? Press on your weapon of choice to start!</p>
+            <div id="rockPaperScissors">
+                <button class="rpsButton" id="rock" type="button" onclick="rockPaperScissors(this.id)"><img src="media/rock.jpeg" alt="Rock"></button>
+                <button class="rpsButton" id="paper" type="button" onclick="rockPaperScissors(this.id)"><img src="media/paper.jpg" alt="Paper"></button>
+                <button class="rpsButton" id="scissors" type="button" onclick="rockPaperScissors(this.id)"><img src="media/scissors.jpg" alt="Scissors"></button>
+            </div>
+            <p id="hiddenRPS" class="hidden"></p>
+        </div>
     </div>
 
     <div class="challenge">

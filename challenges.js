@@ -82,7 +82,7 @@ function eligible() {
         return document.getElementById("hiddenEligible").textContent = "You are eligible to vote, join the army and drive. You are not eligible to hire a car."
     }
     else if (age >= 17) {
-        return document.getElementById("hiddenEligible").textContent = "You are eligible to drive and join the army. You are not eligible to vote or hire a car."
+        return document.getElementById("hiddenEligible").textContent = "You are eligible to join the army and drive. You are not eligible to vote or hire a car."
     }
     if (age >= 16) {
         return document.getElementById("hiddenEligible").textContent = "You are eligible to join the army. You are not eligible to vote, hire a car or drive."
@@ -91,3 +91,55 @@ function eligible() {
         return document.getElementById("hiddenEligible").textContent = "You are not eligible to vote, hire a car, join the army or drive."
     }
 }
+
+// Challenge 6
+
+function rockPaperScissors(clicked_id) {
+    //cpu
+    let cpu = Math.floor(Math.random() * 3) + 1;
+    if (cpu == 1) {
+        cpu = "rock"
+    }
+    else if (cpu == 2) {
+        cpu = "paper"
+    }
+    else {
+        cpu = "scissors"
+    }
+    // player
+    if (clicked_id == "rock") {
+        if (cpu == "rock") {
+            return document.getElementById("hiddenRPS").textContent = "I picked rock. We drew!"
+        }
+        else if (cpu == "paper") {
+            return document.getElementById("hiddenRPS").textContent = "I picked paper. You lost!"
+        }
+        else {
+            return document.getElementById("hiddenRPS").textContent = "I picked scissors. You win!"
+        }
+    }
+    if (clicked_id == "paper") {
+        if (cpu == "paper") {
+            return document.getElementById("hiddenRPS").textContent = "I picked paper. We drew!"
+        }
+        else if (cpu == "rock") {
+            return document.getElementById("hiddenRPS").textContent = "I picked rock. You win!"
+        }
+        else {
+            return document.getElementById("hiddenRPS").textContent = "I picked scissors. You lost."
+        }
+    }
+    if (clicked_id == "scissors") {
+        if (cpu == "scissors") {
+            return document.getElementById("hiddenRPS").textContent = "I picked scissors. We drew!"
+        }
+        else if (cpu == "rock") {
+            return document.getElementById("hiddenRPS").textContent = "I picked rock. You lost."
+        }
+        else {
+            return document.getElementById("hiddenRPS").textContent = "I picked paper. You win!"
+        }
+    }
+}
+
+// learning point for me: about function parameters; specifically passing an id through a function using this.id and clicked_id.
