@@ -45,8 +45,6 @@ function cubVol() {
 
 // Challenge 4
 
-/*recieve their birthday, recieve today's date, todaysdate - birthday, work out how many days there are between, */
-
 function alive() {
     let todaysdate = new Date();
     let birthday = document.getElementById("days").valueAsDate;
@@ -65,4 +63,31 @@ function alive() {
     let secondsAlive = Math.floor(timeDif / secondsDay);
     document.getElementById("hiddenDaysAlive").textContent = `You have been alive for ${days} days!`;
     document.getElementById("hiddenSecondsAlive").textContent = `You have been alive for ${secondsAlive} seconds!`;
+}
+
+// Challenge 5
+
+function eligible() {
+    let todaysdate = new Date();
+    let birthday = document.getElementById("days").valueAsDate;
+    let todaysdate_ms = todaysdate.getTime();
+    let birthday_ms = birthday.getTime();
+    let timeDif = todaysdate_ms - birthday_ms;
+    let yearms = 1000 * 60 * 60 * 24 * 7 * 52;
+    const age = Math.floor(timeDif / yearms);
+    if (age >= 23) {
+        return document.getElementById("hiddenHire").textContent = "You are eligible to vote, join the army, drive and hire a car" 
+    }
+    else if (age >= 18) {
+        return document.getElementById("hiddenVote").textContent = "You are eligible to vote, join the army and drive. You are not eligible to hire a car."
+    }
+    else if (age >= 17) {
+        return document.getElementById("hiddenDrive").textContent = "You are eligible to drive and join the army. You are not eligible to vote or hire a car."
+    }
+    if (age >= 16) {
+        return document.getElementById("hiddenArmy").textContent = "You are eligible to join the army. You are not eligible to vote, hire a car or drive."
+    }
+    else {
+        return document.getElementById("hiddenArmy").textContent = "You are not eligible to vote, hire a car, join the army or drive."
+    }
 }
