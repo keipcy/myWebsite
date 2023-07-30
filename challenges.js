@@ -48,5 +48,15 @@ function cubVol() {
 /*recieve their birthday, recieve today's date, todaysdate - birthday, work out how many days there are between, */
 
 function days() {
-    
+    let todaysdate = new Date();
+    let birthday = document.getElementById("days").valueAsDate;
+    // converts date to miliseconds
+    let todaysdate_ms = todaysdate.getTime();
+    let birthday_ms = birthday.getTime();
+    // subtract
+    let timeDif = todaysdate_ms - birthday_ms;
+    // ms in one day (hours minutes seconds ms)
+    const msDay = 24 * 60 * 60 * 1000;
+    let days = Math.floor(timeDif / msDay);
+    return document.getElementById("hiddenDaysAlive").innerHTML = "You have been alive for " + days + " days!";
 }

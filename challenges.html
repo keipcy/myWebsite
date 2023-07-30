@@ -3,6 +3,7 @@
 <head>
     <title>Challenges</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/gif" href="cat.gif">
 </head>
 <body>
     <header>
@@ -74,7 +75,7 @@
                 <label for="height">Please enter the height of your cuboid:</label>
                 <input id="height" type="number" name="height">
                 <br><br>
-                <label for="length">Please enter the length of your rectangle:</label>
+                <label for="length">Please enter the length of your cuboid:</label>
                 <input id="length" type="number" name="length">
             </form>
             <p>Click below to calculate the volume of your cubiod.</p>
@@ -90,7 +91,10 @@
 
         <label for="days">Please enter your date of birth.</label>
         <input id="days" type="date" name="days">
-        
+        <br>
+        <p>Click below to calculate how many days you have been alive for:</p>
+        <button type="button" onclick="days()">Calculate</button>
+        <p id="hiddenDaysAlive" class="hidden"></p>
     </div>
 
     <div class="challenge">
@@ -134,5 +138,5 @@
     </div>
 </div>
 </body>
-<script src="demo.js"></script>
+<script src="challenges.js"></script>
 </html>
