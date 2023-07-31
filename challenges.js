@@ -143,3 +143,5 @@ function rockPaperScissors(clicked_id) {
 }
 
 // learning point for me: about function parameters; specifically passing an id through a function using this.id and clicked_id.
+
+// Challenge 7

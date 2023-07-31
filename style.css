@@ -1,7 +1,7 @@
 /*styling for the whole webpage*/
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color:blanchedalmond;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background-color:#c0ccb8;
     font-size:16px;
     padding-left:5%;
     padding-right:5%;
@@ -46,6 +46,7 @@ body {
     padding: 2%;
     justify-content: center;
     align-items: center;
+    text-align: left;
     flex-wrap: wrap;
 }
 
@@ -74,26 +75,32 @@ img {
     padding:10px;
 }
 
+figcaption {
+    text-align: center;
+    border-style: double;
+    padding: 10px;
+}
+
 /*styling the images in the flex-container*/
 .flex-container img {
-    height:150px;
+    height: 200px;
     padding:10px;
-    border-style:solid;
+    border-style: none;
     margin:20px;
-    background-color:white;
+    background-color: transparent;
 }
 
 /*styling the navigation bar*/
 nav ul{
-    background-color: darksalmon;  
-    overflow:hidden;
+    background-color: #647559;  
     list-style-type: none;
+    overflow: hidden;
 }
 
 /*styling the links in the nav bar*/
 nav ul a {
     float: left;
-    display:block;
+    display: block;
     color: white;
     text-align: center;
     padding: 10px;
@@ -102,9 +109,11 @@ nav ul a {
 
 /*change the colour of the nav item the mouse hovers over*/
 nav a:hover {
-    background-color: black;
+    background-color: #966f90;
 }
+
 /*change the colour of the nav item for the page you are currently on*/
 #active {
-    background-color: darkseagreen;
+    background-color: #f7c3b7;
+    color: #30362f;
 }

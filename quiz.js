@@ -8,7 +8,7 @@ function checkAnswers() {
         score = score + 1;
     }
     answerTwo = quiz.stockport.value;
-    if (answerTwo == "theBlossoms") {
+    if (answerTwo == "blossoms") {
         score = score + 1;
     }
     alert ("Well done! Your score was " + score + " :)");
