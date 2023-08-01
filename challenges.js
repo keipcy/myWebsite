@@ -142,6 +142,34 @@ function rockPaperScissors(clicked_id) {
     }
 }
 
+function click() {
+    document.querySelector("rpsButton").style.border = "thick solid black";
+    
+}
+
 // learning point for me: about function parameters; specifically passing an id through a function using this.id and clicked_id.
 
 // Challenge 7
+
+function numberGame(clicked_id) {
+    // To find a random number between two values: Math.random() * (max - min) + min
+    let startNum = Math.floor(Math.random() * 10 + 20);
+    while (startNum != 0) {
+        console.log("keep going")
+        if (startNum = 0) { 
+            break; 
+        }
+        else {
+            if (clicked_id == "one") {
+                let startNum = startNum - 1
+            }
+            else if (clicked_id == "two") {
+                let startNum = startNum - 2
+            }
+            else {
+                let startNum = startNum - 3
+            }
+        }
+    }
+    return document.querySelector("hiddenDontGetZero").textContent = "Keep going!"
+}

@@ -95,10 +95,10 @@
         <h2>Challenge 4</h2>
         <p>Write a program to work out how many days you have lived for.</p>
         <p>Extension: have the program calculate how many seconds you have lived for</p>
+        <div class="solution">
         <label for="days">Please enter your date of birth.</label>
         <input id="days" type="date" name="days">
         <br><br>
-        <div class="solution">
             <p>Click below to calculate how many days you have been alive for:</p>
             <button type="button" onclick="alive()">Calculate</button>
             <p id="hiddenDaysAlive" class="hidden"></p>
@@ -118,16 +118,14 @@
         <h2>Challenge 6</h2>
         <p>Make a game of rock, paper, scissors against the computer.</p>
         <p>Extension: Create a UI in HTML and CSS for this game</p>
-        <div id="rockPaperScissors">
-            <h3>Rock, Paper, Scissors!</h3>
-            <p>Would you like to join me in a game of rock, paper, scissors? Press on your weapon of choice to start!</p>
             <div id="rockPaperScissors">
-                <button class="rpsButton" id="rock" type="button" onclick="rockPaperScissors(this.id)"><img src="media/rock.jpeg" alt="Rock"></button>
-                <button class="rpsButton" id="paper" type="button" onclick="rockPaperScissors(this.id)"><img src="media/paper.jpg" alt="Paper"></button>
-                <button class="rpsButton" id="scissors" type="button" onclick="rockPaperScissors(this.id)"><img src="media/scissors.jpg" alt="Scissors"></button>
+                <h3>Rock, Paper, Scissors!</h3>
+                <p>Would you like to join me in a game of rock, paper, scissors? Press on your weapon of choice to start!</p>
+                <button class="rpsButton" id="rock" type="button" onclick="rockPaperScissors(this.id);click()"><img src="media/rock.jpeg" alt="Rock"></button>
+                <button class="rpsButton" id="paper" type="button" onclick="rockPaperScissors(this.id);click()"><img src="media/paper.jpg" alt="Paper"></button>
+                <button class="rpsButton" id="scissors" type="button" onclick="rockPaperScissors(this.id);click()"><img src="media/scissors.jpg" alt="Scissors"></button>
+                <p id="hiddenRPS" class="hidden"></p>
             </div>
-            <p id="hiddenRPS" class="hidden"></p>
-        </div>
     </div>
 
     <div class="challenge">
@@ -143,6 +141,14 @@
         <p>Computer removes 1</p>
         <p>You win!</p>
         <p>Extension: Create a UI in HTML and CSS for this game</p>
+        <div class="solution">
+            <h3>Don't get zero!</h3>
+            <p>How the game works: The computer will pick a random number between 20 and 30. We then take it in turns to take away 1, 2 or 3 from the unknown number. the person who brings the number down to zero loses.</p>
+        <button class="dontGetZero" id="one" type="button" onclick="numberGame(this.id)">One</button>
+        <button class="dontGetZero" id="two" type="button" onclick="numberGame(this.id)">Two</button>
+        <button class="dontGetZero" id="three" type="button" onclick="numberGame(this.id)">Three</button>
+        <p id="hiddenDontGetZero" class="hidden"></p>
+        </div>
     </div>
 
     <div class="challenge">
@@ -158,6 +164,9 @@
         <p>Extension: Create a UI in HTML and CSS for this game</p>
     </div>
 </div>
+<footer>
+    <p>Copyright Kothar Aljanabi 2023</p>
+</footer>
 </body>
 <script src="challenges.js"></script>
 </html>
